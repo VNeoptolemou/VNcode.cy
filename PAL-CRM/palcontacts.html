@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAL CONTACTS</title>
+    <!-- DataTables -->
+    <link rel="stylesheet" href="lib/datatables/dataTables.css" />
+    <link href="palhome.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="palhome.html" class="logo">Pal Surveying</a>
+    </div>
+
+    <table id="myTable" class="display" style="width: 100%">
+        <thead>
+          <tr>
+            <th>ServicesID</th>
+            <th>Customer Name</th>
+            <th>Service Type</th>
+            <th>Area</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+  
+      <!-- jQuery -->
+      <script src="lib/jquery/jquery-3.7.1.min.js"></script>
+  
+      <!-- DataTables -->
+      <script src="lib/datatables/dataTables.js"></script>
+  
+      <script>
+        $(document).ready(function () {
+          $("#myTable").DataTable({
+            ajax: {
+              url: "https://palsurveying.com/webapp/select_search_test.php",
+              dataSrc: "data",
+            },
+            columns: [
+              { data: "ServicesID" },
+              { data: "PelatesName" },
+              { data: "TypeOfWork" },
+              { data: "Area" },
+            ],
+          });
+        });
+      </script>
+  
+      <script>
+        new DataTable("#example", {
+          initComplete: function () {
+            this.api()
+              .columns()
+              .every(function () {
+                let column = this;
+                let title = column.footer().textContent;
+  
+                // Create input element
+                let input = document.createElement("input");
+                input.placeholder = title;
+                column.footer().replaceChildren(input);
+  
+                // Event listener for user input
+                input.addEventListener("keyup", () => {
+                  if (column.search() !== this.value) {
+                    column.search(input.value).draw();
+                  }
+                });
+              });
+          },
+        });
+      </script>
+    </body>
+  </html>
+  
+  </body>
+</html>
