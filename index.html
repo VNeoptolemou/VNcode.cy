@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VN page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container-wrapper">
+      <header class="header">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html" rel="home" title="Home">
+              <img src="img/myLogo.png" alt="Home Logo" />
+            </a>
+          </div>
+          <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="nav-menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <section id="home" class="home">
+      <img src="img/starting-background.png" alt="BG" />
+
+      <div class="scroll-down">
+        <a
+          href="javascript:void(0);"
+          onclick="scrollToServices()"
+          title="Scroll down"
+        >
+          <i class="fa-solid fa-angles-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <div class="container-wrapper">
+      <section id="services" class="services">
+        <h2 class="heading">Services</h2>
+        <div class="services-container">
+          <div class="service-info">
+            <i class="fa-brands fa-sketch"></i>
+            <h3>Design</h3>
+            <p>
+              Custom-made websites designed to offer professional & strong
+              online presence.
+            </p>
+          </div>
+
+          <div class="service-info">
+            <i class="fa-solid fa-code"></i>
+            <h3>Responsiveness</h3>
+            <p>
+              Responsive websites across all devices for a seemless user
+              experience.
+            </p>
+          </div>
+
+          <div class="service-info">
+            <i class="fa-brands fa-sistrix"></i>
+            <h3>SEO & AI Recommendation</h3>
+            <p>
+              Don't just rank high on Google. Get directly cited as a trusted
+              source by ChatGPT, Claude, and Google AI.
+            </p>
+          </div>
+          <a href="#" target="blank" class="learn-more"
+            >Learn more <i class="fa-solid fa-angles-right"></i
+          ></a>
+        </div>
+      </section>
+    </div>
+
+    <section id="projects" class="projects">
+      <h2 class="heading">Projects</h2>
+      <div class="projects-container">
+        <div class="carousel">
+          <div id="carousel" class="carousel-track">
+            <img src="img/cleaner website.jpeg" />
+            <img src="img/contractor website.jpg" />
+            <img src="img/electrician website.jpg" />
+            <img src="img/plumber website.png" />
+            <img src="img/tutor website.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-wrapper">
+      <section id="about" class="about">
+        <h2 class="heading">About</h2>
+        <div class="about-container">
+          <img src="img/about-img.png" />
+          <p>
+            VN Developing was established in 2026 and specializes in creating
+            reliable, clean and responsive websites for local businesses that
+            want a professional online presence. VN Developing also targets at
+            optimizing your digital footpring. We are committed to maximise your
+            website's ability to rank high on search engines and also be
+            embedded as a trusted link in AI generated answers.
+          </p>
+        </div>
+        <a href="#" target="blank" class="learn-more"
+          >Learn more <i class="fa-solid fa-angles-right"></i
+        ></a>
+      </section>
+    </div>
+
+    <div class="container-wrapper">
+      <section id="contact" class="contact">
+        <h2 class="heading">Contact</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3 class="heading-2">Get in touch!</h3>
+            <ul>
+              <li>
+                <p>
+                  Call at
+                  <a class="call-email" href="tel:96-408617">96-408617</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Email at
+                  <a
+                    class="call-email"
+                    href="mailto:vneoptolemou98@gmail.com"
+                    target="blank"
+                    >vneoptolemou98@gmail.com</a
+                  >
+                </p>
+              </li>
+              <li>
+                <a href="#" target="blank" title="Facebook"
+                  ><i class="fa-brands fa-facebook fa-xl"></i
+                ></a>
+                <a href="#" target="blank" title="Instagram"
+                  ><i class="fa-brands fa-instagram fa-xl"></i
+                ></a>
+                <a href="#" target="blank" title="X(Twitter)"
+                  ><i class="fa-brands fa-x-twitter fa-xl"></i
+                ></a>
+                <a href="#" target="blank" title="LinkedIn"
+                  ><i class="fa-brands fa-linkedin fa-xl"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form">
+            <h3 class="heading-2">Submit your request..</h3>
+            <form action="#">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="firstname" />
+
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="lastname" />
+
+              <label for="phone-number">Phone Number</label>
+              <input type="text" id="phone-number" name="phonenumber" />
+
+              <label for="email-address">Email Address</label>
+              <input type="text" id="email-address" name="emailaddress" />
+
+              <label for="subject">Subject</label>
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Type your message here.."
+              ></textarea>
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container-wrapper">
+        <div class="copyright">
+          Copyright © <span id="thisYear"></span> VN Developing. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
