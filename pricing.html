@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Estimate your website's budget with the VN Developing calculator. Explore how page count and custom tools affect your project cost."
+    />
+    <title>Website Pricing & Budget Calculator | VN Developing</title>
+    <link rel="icon" href="img/myLogo-edit.png" />
+    <!-- for older browsers -->
+    <link rel="shortcut icon" href="img/myLogo-edit.png" />
+    <!-- for newest browsers -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="100x100"
+      href="img/myLogo-edit.png"
+    />
+    <!-- for apple devices -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container-wrapper">
+      <header class="header">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html" rel="home" title="Home">
+              <img src="img/myLogo.png" alt="Home Logo" />
+            </a>
+          </div>
+          <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="pricing.html">Pricing</a>
+          </nav>
+          <div class="start-a-project-btn">
+            <a href="contact.html" class="btn">Start a Project</a>
+          </div>
+          <div class="nav-menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="container-wrapper">
+      <div id="pricing" class="pricing">
+        <h2 class="heading">Pricing</h2>
+        <div class="budget-calculator" aria-labelledby="budget-title">
+          <h2 id="budget-title">Build your website budget</h2>
+          <p class="budget-description">
+            Drag the sliders or tick the examples to build your sample estimate.
+          </p>
+          <div class="budget-control">
+            <div class="budget-label">
+              <label for="budget-pages">Website pages</label>
+              <output id="budget-pages-value" for="budget-pages">2</output>
+            </div>
+            <input
+              type="range"
+              id="budget-pages"
+              min="1"
+              max="12"
+              value="2"
+              step="1"
+            />
+            <div class="budget-scale" aria-hidden="true">
+              <span>1 page</span><span>12 pages</span>
+            </div>
+            <details class="budget-options" name="budget-examples">
+              <summary>Choose pages from these examples</summary>
+              <p class="budget-help">
+                Select at least one page. Each tick adds one page.
+              </p>
+              <fieldset class="budget-option-grid" id="budget-page-options">
+                <legend class="budget-options-legend">
+                  Website page examples
+                </legend>
+                <label
+                  ><input type="checkbox" value="Home" checked /><span
+                    >Home</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Services" checked /><span
+                    >Services</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Projects" /><span
+                    >Projects</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="About" /><span
+                    >About</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Contact" /><span
+                    >Contact</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Pricing" /><span
+                    >Pricing</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="FAQs" /><span
+                    >FAQs</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Testimonials" /><span
+                    >Testimonials</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Blog" /><span
+                    >Blog</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Team" /><span
+                    >Team</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Gallery" /><span
+                    >Gallery</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Careers" /><span
+                    >Careers</span
+                  ></label
+                >
+              </fieldset>
+            </details>
+          </div>
+          <div class="budget-control">
+            <div class="budget-label">
+              <label for="budget-tools">Custom tools</label>
+              <output id="budget-tools-value" for="budget-tools">1</output>
+            </div>
+            <input
+              type="range"
+              id="budget-tools"
+              min="0"
+              max="5"
+              value="0"
+              step="1"
+              aria-describedby="budget-tools-help"
+            />
+            <div class="budget-scale" aria-hidden="true">
+              <span>None</span><span>5 tools</span>
+            </div>
+            <details class="budget-options" name="budget-examples" open>
+              <summary>Choose tools from these examples</summary>
+              <fieldset class="budget-option-grid" id="budget-tool-options">
+                <legend class="budget-options-legend">
+                  Custom tool examples
+                </legend>
+                <label
+                  ><input type="checkbox" value="Booking form" checked /><span
+                    >Booking form</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Customer dashboard" /><span
+                    >Customer dashboard</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Budget calculator" /><span
+                    >Budget calculator</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Quote request form" /><span
+                    >Quote request form</span
+                  ></label
+                >
+                <label
+                  ><input type="checkbox" value="Availability calendar" /><span
+                    >Availability calendar</span
+                  ></label
+                >
+              </fieldset>
+            </details>
+          </div>
+          <div class="budget-result">
+            <span>Estimated project budget</span>
+            <output
+              id="budget-total"
+              for="budget-pages budget-tools"
+              aria-live="polite"
+              aria-atomic="true"
+              >€1,250</output
+            >
+            <p>
+              *Sample pricing only. Your final quote depends on the project
+              scope.
+            </p>
+          </div>
+          <a href="contact.html" class="budget-cta"
+            >Let's discuss your project
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container-wrapper">
+        <div class="copyright">
+          Copyright © <span id="thisYear"></span> VN Developing. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
